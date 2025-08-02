@@ -1,9 +1,15 @@
 services:
   - type: web
-    name: employee-management
+    name: employee-management-api
     env: python
+    region: oregon
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    startCommand: gunicorn api:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120
     envVars:
       - key: GOOGLE_API_KEY
         sync: false
+      - key: FLASK_DEBUG
+        value: "false"
+      - key: DATA_FILE
+        value: "employees.json"
+    healthCheckPath: /api/v1/health
