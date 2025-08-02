@@ -168,3 +168,34 @@
  * Running on http://127.0.0.1:5000
  * Running on http://10.248.56.252:5000
 2025-08-02 18:07:45,799 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-02 21:36:37,272 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:36:37] "GET /api/v1/stats HTTP/1.1" 200 -
+2025-08-02 21:38:11,263 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:38:11] "GET /api/v1/stats HTTP/1.1" 200 -
+2025-08-02 21:47:52,320 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:47:52] "OPTIONS /api/v1/employees/1 HTTP/1.1" 200 -
+2025-08-02 21:47:52,326 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:47:52] "GET /api/v1/employees/1 HTTP/1.1" 200 -
+2025-08-02 21:48:23,775 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:48:23] "OPTIONS /api/v1/employees?department=Engineering&limit=10 HTTP/1.1" 200 -
+2025-08-02 21:48:23,780 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:48:23] "GET /api/v1/employees?department=Engineering&limit=10 HTTP/1.1" 200 -
+2025-08-02 21:48:26,036 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:48:26] "GET /api/v1/employees?department=Engineering&limit=10 HTTP/1.1" 200 -
+2025-08-02 21:48:31,787 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:48:31] "OPTIONS /api/v1/employees?limit=10 HTTP/1.1" 200 -
+2025-08-02 21:48:31,805 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:48:31] "GET /api/v1/employees?limit=10 HTTP/1.1" 200 -
+2025-08-02 21:51:29,105 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:51:29] "OPTIONS /api/v1/employees?department=HR&limit=10 HTTP/1.1" 200 -
+2025-08-02 21:51:29,109 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:51:29] "GET /api/v1/employees?department=HR&limit=10 HTTP/1.1" 200 -
+2025-08-02 21:51:53,184 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:51:53] "OPTIONS /api/v1/employees/1 HTTP/1.1" 200 -
+2025-08-02 21:51:53,186 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 21:51:53] "GET /api/v1/employees/1 HTTP/1.1" 200 -
+2025-08-02 22:01:02,632 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:02] "GET /docs/ HTTP/1.1" 200 -
+2025-08-02 22:01:02,665 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:02] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2025-08-02 22:01:02,666 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:02] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-08-02 22:01:02,668 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:02] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-08-02 22:01:02,669 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:02] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-08-02 22:01:02,864 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:02] "GET /swagger.yaml HTTP/1.1" 200 -
+2025-08-02 22:01:02,871 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:02] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-08-02 22:01:19,001 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:19] "OPTIONS /api/v1/health HTTP/1.1" 200 -
+2025-08-02 22:01:19,007 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:19] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 22:01:20,101 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:01:20] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 22:09:29,631 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:29] "GET /docs/ HTTP/1.1" 200 -
+2025-08-02 22:09:29,680 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:29] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2025-08-02 22:09:29,680 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:29] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-08-02 22:09:29,685 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:29] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-08-02 22:09:29,688 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:29] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-08-02 22:09:29,889 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:29] "GET /swagger.yaml HTTP/1.1" 200 -
+2025-08-02 22:09:29,890 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:29] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-08-02 22:09:44,839 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:44] "GET /api/v1/health HTTP/1.1" 200 -

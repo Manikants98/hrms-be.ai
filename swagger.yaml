@@ -402,24 +402,23 @@ components:
             joining_date: "2025-08-02"
 
   examples:
-    CreateEmployeeExamples:
-      formal_description:
-        summary: Formal employee description
-        description: A structured description with all information clearly stated
-        value:
-          prompt: "Jane Doe, Senior Marketing Manager in Marketing Department, email: jane.doe@company.com, joining date: 2024-03-01"
+    FormalEmployeeDescription:
+      summary: Formal employee description
+      description: A structured description with all information clearly stated
+      value:
+        prompt: "Jane Doe, Senior Marketing Manager in Marketing Department, email: jane.doe@company.com, joining date: 2024-03-01"
 
-      casual_description:
-        summary: Casual employee description
-        description: A natural language description as you might hear in conversation
-        value:
-          prompt: "We just hired Mike Johnson as our new Data Scientist. He'll be working in the Analytics team and his email is mike.j@company.com. He starts next Monday."
+    CasualEmployeeDescription:
+      summary: Casual employee description
+      description: A natural language description as you might hear in conversation
+      value:
+        prompt: "We just hired Mike Johnson as our new Data Scientist. He'll be working in the Analytics team and his email is mike.j@company.com. He starts next Monday."
 
-      minimal_information:
-        summary: Minimal information provided
-        description: Only basic information is available
-        value:
-          prompt: "Sarah Wilson, HR Coordinator, sarah.wilson@company.com"
+    MinimalEmployeeInformation:
+      summary: Minimal information provided
+      description: Only basic information is available
+      value:
+        prompt: "Sarah Wilson, HR Coordinator, sarah.wilson@company.com"
 
   responses:
     BadRequest:
