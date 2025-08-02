@@ -1,0 +1,450 @@
+openapi: 3.0.3
+info:
+  title: Employee Management System API
+  description: |
+    A Flask-based Employee Management System that uses AI (Google Gemini) to extract structured employee data from unstructured text input.
+
+    ## Features
+    - AI-powered employee data extraction from natural language
+    - Employee creation, retrieval, and listing
+    - Department-based filtering
+    - Employee statistics and analytics
+    - Data validation and error handling
+
+    ## Authentication
+    This API currently does not require authentication but uses Google Gemini API internally.
+
+  version: 1.0.0
+  contact:
+    name: Employee Management System
+    email: support@company.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:5000/api/v1
+    description: Development server
+  - url: https://api.company.com/api/v1
+    description: Production server
+
+tags:
+  - name: health
+    description: Health check and system status
+  - name: employees
+    description: Employee management operations
+  - name: statistics
+    description: Employee statistics and analytics
+
+paths:
+  /health:
+    get:
+      tags:
+        - health
+      summary: Health check endpoint
+      description: Returns the current health status of the API and basic system information
+      operationId: healthCheck
+      responses:
+        "200":
+          description: System is healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+              example:
+                status: "healthy"
+                timestamp: "2025-08-02T10:30:00.123456"
+                total_employees: 42
+
+  /employees:
+    post:
+      tags:
+        - employees
+      summary: Create a new employee
+      description: |
+        Creates a new employee by extracting structured data from unstructured text input using AI.
+        The system can understand natural language descriptions of employee information.
+      operationId: createEmployee
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateEmployeeRequest"
+            examples:
+              formal_input:
+                summary: Formal employee description
+                value:
+                  prompt: "John Smith, Software Engineer in Engineering Department, email: john.smith@company.com, joined on 2024-01-15"
+              casual_input:
+                summary: Casual employee description
+                value:
+                  prompt: "We have a new hire Sarah Johnson who's joining our Marketing team as a Marketing Manager. Her email is sarah.j@company.com and she starts tomorrow."
+              minimal_input:
+                summary: Minimal information
+                value:
+                  prompt: "Alex Brown, HR Specialist, alex.brown@company.com"
+      responses:
+        "201":
+          description: Employee created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateEmployeeResponse"
+        "400":
+          description: Bad request - validation failed or missing data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationError"
+        "415":
+          description: Unsupported Media Type - Content-Type must be application/json
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+    get:
+      tags:
+        - employees
+      summary: List all employees
+      description: Retrieves a list of all employees with optional filtering capabilities
+      operationId: listEmployees
+      parameters:
+        - name: department
+          in: query
+          description: Filter employees by department (case-insensitive)
+          required: false
+          schema:
+            type: string
+          example: "Engineering"
+        - name: limit
+          in: query
+          description: Limit the number of results returned
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+          example: 10
+      responses:
+        "200":
+          description: List of employees retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EmployeeListResponse"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /employees/{employee_id}:
+    get:
+      tags:
+        - employees
+      summary: Get employee by ID
+      description: Retrieves detailed information about a specific employee
+      operationId: getEmployee
+      parameters:
+        - name: employee_id
+          in: path
+          description: Unique identifier of the employee
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+          example: 1
+      responses:
+        "200":
+          description: Employee details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EmployeeResponse"
+        "404":
+          description: Employee not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                error: "Employee not found"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /stats:
+    get:
+      tags:
+        - statistics
+      summary: Get employee statistics
+      description: |
+        Retrieves comprehensive statistics about the employee database including:
+        - Total employee count
+        - Department distribution
+        - Recent hires (last 30 days)
+      operationId: getStatistics
+      responses:
+        "200":
+          description: Statistics retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StatisticsResponse"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+components:
+  schemas:
+    Employee:
+      type: object
+      required:
+        - name
+        - email
+        - department
+        - job_title
+        - joining_date
+      properties:
+        employee_id:
+          type: integer
+          description: Unique identifier for the employee
+          example: 1
+        name:
+          type: string
+          description: Full name of the employee
+          minLength: 2
+          example: "John Smith"
+        email:
+          type: string
+          format: email
+          description: Email address of the employee
+          example: "john.smith@company.com"
+        department:
+          type: string
+          description: Department or division the employee belongs to
+          example: "Engineering"
+        job_title:
+          type: string
+          description: Job title or position of the employee
+          example: "Senior Software Engineer"
+        joining_date:
+          type: string
+          format: date
+          description: Date when the employee joined the company (YYYY-MM-DD)
+          example: "2024-01-15"
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the employee record was created
+          example: "2025-08-02T10:30:00.123456"
+        updated_at:
+          type: string
+          format: date-time
+          description: Timestamp when the employee record was last updated
+          example: "2025-08-02T10:30:00.123456"
+
+    CreateEmployeeRequest:
+      type: object
+      required:
+        - prompt
+      properties:
+        prompt:
+          type: string
+          description: |
+            Unstructured text containing employee information. The AI will extract:
+            - Name
+            - Email address
+            - Department
+            - Job title
+            - Joining date (if not provided, uses current date)
+          minLength: 1
+          example: "John Smith, Software Engineer in Engineering Department, email: john.smith@company.com, joined on 2024-01-15"
+
+    CreateEmployeeResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "Employee created successfully"
+        employee_id:
+          type: integer
+          description: ID assigned to the newly created employee
+          example: 1
+        employee_data:
+          $ref: "#/components/schemas/Employee"
+
+    EmployeeResponse:
+      type: object
+      properties:
+        employee:
+          $ref: "#/components/schemas/Employee"
+        timestamp:
+          type: string
+          format: date-time
+          description: Timestamp when the response was generated
+          example: "2025-08-02T10:30:00.123456"
+
+    EmployeeListResponse:
+      type: object
+      properties:
+        employees:
+          type: array
+          items:
+            $ref: "#/components/schemas/Employee"
+        total_count:
+          type: integer
+          description: Total number of employees returned (after filtering)
+          example: 25
+        timestamp:
+          type: string
+          format: date-time
+          description: Timestamp when the response was generated
+          example: "2025-08-02T10:30:00.123456"
+
+    StatisticsResponse:
+      type: object
+      properties:
+        total_employees:
+          type: integer
+          description: Total number of employees in the system
+          example: 150
+        departments:
+          type: object
+          description: Employee count by department
+          additionalProperties:
+            type: integer
+          example:
+            Engineering: 45
+            Marketing: 25
+            Sales: 30
+            HR: 15
+            Finance: 20
+            Operations: 15
+        recent_hires:
+          type: integer
+          description: Number of employees hired in the last 30 days
+          example: 5
+        timestamp:
+          type: string
+          format: date-time
+          description: Timestamp when the statistics were generated
+          example: "2025-08-02T10:30:00.123456"
+
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [healthy, unhealthy]
+          description: Current health status of the API
+          example: "healthy"
+        timestamp:
+          type: string
+          format: date-time
+          description: Timestamp when the health check was performed
+          example: "2025-08-02T10:30:00.123456"
+        total_employees:
+          type: integer
+          description: Current total number of employees in the system
+          example: 150
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error type or category
+          example: "Bad request"
+        message:
+          type: string
+          description: Detailed error message
+          example: "Missing or empty prompt field"
+
+    ValidationError:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error type
+          example: "Validation failed"
+        details:
+          type: array
+          items:
+            type: string
+          description: List of validation errors
+          example:
+            - "Invalid or missing employee name"
+            - "Invalid or missing email address"
+        extracted_data:
+          type: object
+          description: The data that was extracted by AI before validation
+          additionalProperties: true
+          example:
+            name: "unknown"
+            email: "invalid-email"
+            department: "Engineering"
+            job_title: "Developer"
+            joining_date: "2025-08-02"
+
+  examples:
+    CreateEmployeeExamples:
+      formal_description:
+        summary: Formal employee description
+        description: A structured description with all information clearly stated
+        value:
+          prompt: "Jane Doe, Senior Marketing Manager in Marketing Department, email: jane.doe@company.com, joining date: 2024-03-01"
+
+      casual_description:
+        summary: Casual employee description
+        description: A natural language description as you might hear in conversation
+        value:
+          prompt: "We just hired Mike Johnson as our new Data Scientist. He'll be working in the Analytics team and his email is mike.j@company.com. He starts next Monday."
+
+      minimal_information:
+        summary: Minimal information provided
+        description: Only basic information is available
+        value:
+          prompt: "Sarah Wilson, HR Coordinator, sarah.wilson@company.com"
+
+  responses:
+    BadRequest:
+      description: Bad request due to invalid input
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+
+    NotFound:
+      description: Requested resource not found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+
+security: []
+
+externalDocs:
+  description: Find more information about OpenAPI
+  url: https://swagger.io/specification/

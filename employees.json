@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Mani Kant Sharma",
+    "email": "manikant@google.com",
+    "department": "IT",
+    "job_title": "Frontend Engineer",
+    "joining_date": "2025-07-05",
+    "employee_id": 1,
+    "created_at": "2025-08-02T14:43:23.992689",
+    "updated_at": "2025-08-02T15:14:03.105714"
+  },
+  {
+    "name": "Emma Wilson",
+    "email": "emma.wilson@company.com",
+    "department": "Analytics Department",
+    "job_title": "Data Scientist",
+    "joining_date": "2024-03-01",
+    "employee_id": 2,
+    "created_at": "2025-08-02T15:51:32.649641",
+    "updated_at": "2025-08-02T15:51:32.649659"
+  },
+  {
+    "name": "Alex Brown",
+    "email": "alex.brown@company.com",
+    "department": "unknown",
+    "job_title": "HR Specialist",
+    "joining_date": "2025-08-02",
+    "employee_id": 3,
+    "created_at": "2025-08-02T15:54:31.138997",
+    "updated_at": "2025-08-02T15:54:31.139012"
+  },
+  {
+    "name": "Alex Brown",
+    "email": "alex.brown@company.com",
+    "department": "HR",
+    "job_title": "HR Specialist",
+    "joining_date": "2025-08-02",
+    "employee_id": 4,
+    "created_at": "2025-08-02T15:54:57.381602",
+    "updated_at": "2025-08-02T15:54:57.381611"
+  },
+  {
+    "name": "Alex Brown",
+    "email": "alex.brown@company.com",
+    "department": "unknown",
+    "job_title": "HR Specialist",
+    "joining_date": "2025-08-02",
+    "employee_id": 5,
+    "created_at": "2025-08-02T15:55:23.669862",
+    "updated_at": "2025-08-02T15:55:23.669867"
+  },
+  {
+    "name": "Alex Brown",
+    "email": "alex.brown@company.com",
+    "department": "HR",
+    "job_title": "HR Specialist",
+    "joining_date": "2025-08-02",
+    "employee_id": 6,
+    "created_at": "2025-08-02T15:55:33.092157",
+    "updated_at": "2025-08-02T15:55:33.092164"
+  }
+]

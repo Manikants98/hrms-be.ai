@@ -1,0 +1,170 @@
+2025-08-02 14:56:45,636 - __main__ - INFO - Loaded 1 employees from employees.json
+2025-08-02 14:56:45,636 - __main__ - INFO - Initialized AI extractor with model: gemini-2.0-flash
+2025-08-02 14:56:45,637 - __main__ - INFO - Starting Employee Management System...
+2025-08-02 14:56:45,637 - __main__ - INFO - Debug mode: False
+2025-08-02 14:56:45,637 - __main__ - INFO - Data file: employees.json
+2025-08-02 14:56:45,637 - __main__ - INFO - Swagger UI available at: http://localhost:5000/docs
+2025-08-02 14:56:45,652 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.248.56.252:5000
+2025-08-02 14:56:45,652 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-02 14:56:45,871 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:56:45] "[32mGET /docs HTTP/1.1[0m" 308 -
+2025-08-02 14:56:45,898 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:56:45] "GET /docs/ HTTP/1.1" 200 -
+2025-08-02 14:56:45,949 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:56:45] "GET /docs/index.css HTTP/1.1" 200 -
+2025-08-02 14:56:45,956 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:56:45] "GET /docs/swagger-ui.css HTTP/1.1" 200 -
+2025-08-02 14:56:45,957 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:56:45] "GET /docs/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-08-02 14:56:45,962 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:56:45] "GET /docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-08-02 14:56:46,229 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:56:46] "GET /swagger.yaml HTTP/1.1" 200 -
+2025-08-02 14:56:46,230 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:56:46] "GET /docs/favicon-32x32.png HTTP/1.1" 200 -
+2025-08-02 14:57:03,297 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:57:03] "GET /health HTTP/1.1" 200 -
+2025-08-02 14:57:05,243 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:57:05] "GET /health HTTP/1.1" 200 -
+2025-08-02 14:57:49,298 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 14:57:49] "GET /health HTTP/1.1" 200 -
+2025-08-02 15:00:06,686 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:00:06] "GET /stats HTTP/1.1" 200 -
+2025-08-02 15:00:11,061 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:00:11] "GET /stats HTTP/1.1" 200 -
+2025-08-02 15:01:07,584 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:01:07] "GET /stats HTTP/1.1" 200 -
+2025-08-02 15:10:40,200 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:40] "GET /docs/ HTTP/1.1" 200 -
+2025-08-02 15:10:40,272 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:40] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2025-08-02 15:10:40,274 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:40] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-08-02 15:10:40,274 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:40] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-08-02 15:10:40,275 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:40] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-08-02 15:10:40,472 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:40] "[36mGET /swagger.yaml HTTP/1.1[0m" 304 -
+2025-08-02 15:10:47,912 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:47] "GET /health HTTP/1.1" 200 -
+2025-08-02 15:10:49,036 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:49] "GET /health HTTP/1.1" 200 -
+2025-08-02 15:10:51,455 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:51] "GET /health HTTP/1.1" 200 -
+2025-08-02 15:10:51,914 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:51] "GET /health HTTP/1.1" 200 -
+2025-08-02 15:10:52,046 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:52] "GET /health HTTP/1.1" 200 -
+2025-08-02 15:10:52,325 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:52] "GET /health HTTP/1.1" 200 -
+2025-08-02 15:10:52,451 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:10:52] "GET /health HTTP/1.1" 200 -
+2025-08-02 15:11:11,173 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:11:11] "[33mGET /health%0A HTTP/1.1[0m" 404 -
+2025-08-02 15:11:13,710 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:11:13] "GET /health HTTP/1.1" 200 -
+2025-08-02 15:11:23,915 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:11:23] "[33mGET /api/v1/health HTTP/1.1[0m" 404 -
+2025-08-02 15:11:30,536 - __main__ - INFO - Loaded 1 employees from employees.json
+2025-08-02 15:11:30,536 - __main__ - INFO - Initialized AI extractor with model: gemini-2.0-flash
+2025-08-02 15:11:30,537 - __main__ - INFO - Starting Employee Management System...
+2025-08-02 15:11:30,537 - __main__ - INFO - Debug mode: False
+2025-08-02 15:11:30,537 - __main__ - INFO - Data file: employees.json
+2025-08-02 15:11:30,537 - __main__ - INFO - Swagger UI available at: http://localhost:5000/docs
+2025-08-02 15:11:30,553 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.248.56.252:5000
+2025-08-02 15:11:30,553 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-02 15:11:41,157 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:11:41] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 15:11:45,616 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:11:45] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-08-02 15:14:03,105 - __main__ - INFO - Loaded 1 employees from employees.json
+2025-08-02 15:14:03,105 - __main__ - INFO - Initialized AI extractor with model: gemini-2.0-flash
+2025-08-02 15:14:03,107 - __main__ - INFO - Starting Employee Management System...
+2025-08-02 15:14:03,107 - __main__ - INFO - Debug mode: False
+2025-08-02 15:14:03,107 - __main__ - INFO - Data file: employees.json
+2025-08-02 15:14:03,107 - __main__ - INFO - Swagger UI available at: http://localhost:5000/docs
+2025-08-02 15:14:03,120 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.248.56.252:5000
+2025-08-02 15:14:03,120 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-02 15:20:55,776 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:20:55] "[33mGET /stats HTTP/1.1[0m" 404 -
+2025-08-02 15:20:56,630 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:20:56] "[33mGET /stats HTTP/1.1[0m" 404 -
+2025-08-02 15:21:33,430 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:33] "GET /docs/ HTTP/1.1" 200 -
+2025-08-02 15:21:33,487 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:33] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-08-02 15:21:33,491 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:33] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2025-08-02 15:21:33,493 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:33] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-08-02 15:21:33,496 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:33] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-08-02 15:21:33,733 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:33] "GET /swagger.yaml HTTP/1.1" 200 -
+2025-08-02 15:21:33,735 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:33] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-08-02 15:21:41,598 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:41] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 15:21:42,815 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:42] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 15:21:52,342 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:52] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-08-02 15:21:59,725 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:21:59] "[33mGET /api//health HTTP/1.1[0m" 404 -
+2025-08-02 15:22:17,314 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:22:17] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 15:23:40,114 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:23:40] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 15:25:38,622 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:25:38] "GET /docs/ HTTP/1.1" 200 -
+2025-08-02 15:25:40,868 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:25:40] "GET /docs/ HTTP/1.1" 200 -
+2025-08-02 15:25:40,941 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:25:40] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2025-08-02 15:25:40,942 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:25:40] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-08-02 15:25:40,947 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:25:40] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-08-02 15:25:40,947 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:25:40] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-08-02 15:25:41,164 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:25:41] "[36mGET /swagger.yaml HTTP/1.1[0m" 304 -
+2025-08-02 15:25:41,168 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:25:41] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-08-02 15:31:06,437 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:31:06] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-08-02 15:31:45,544 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:31:45] "[32mGET /api/v1//health HTTP/1.1[0m" 308 -
+2025-08-02 15:31:45,547 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:31:45] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 15:32:30,941 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:32:30] "[32mGET /api/v1// HTTP/1.1[0m" 308 -
+2025-08-02 15:32:30,944 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:32:30] "GET /api/v1/ HTTP/1.1" 200 -
+2025-08-02 15:49:30,651 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:49:30] "[32mGET /api/v1// HTTP/1.1[0m" 308 -
+2025-08-02 15:49:30,656 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:49:30] "GET /api/v1/ HTTP/1.1" 200 -
+2025-08-02 15:51:29,809 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:51:29] "[32mPOST /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:51:29,815 - __main__ - INFO - Processing employee creation request with prompt: Emma Wilson is our new Data Scientist. She has a PhD in Statistics and will be working in the Analyt...
+2025-08-02 15:51:32,644 - __main__ - INFO - AI Response: name: Emma Wilson, email: emma.wilson@company.com, department: Analytics Department, job_title: Data Scientist, joining_date: 2024-03-01
+2025-08-02 15:51:32,651 - __main__ - INFO - Saved 2 employees to employees.json
+2025-08-02 15:51:32,651 - __main__ - INFO - Successfully created employee with ID: 2
+2025-08-02 15:51:32,652 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:51:32] "[35m[1mPOST /api/v1/employees HTTP/1.1[0m" 201 -
+2025-08-02 15:51:41,819 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:51:41] "[32mGET /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:51:41,820 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:51:41] "GET /api/v1/employees HTTP/1.1" 200 -
+2025-08-02 15:51:54,376 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:51:54] "[32mGET /api/v1//employees?department=Engineering HTTP/1.1[0m" 308 -
+2025-08-02 15:51:54,378 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:51:54] "GET /api/v1/employees?department=Engineering HTTP/1.1" 200 -
+2025-08-02 15:52:17,574 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:52:17] "[32mGET /api/v1//stats HTTP/1.1[0m" 308 -
+2025-08-02 15:52:17,575 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:52:17] "GET /api/v1/stats HTTP/1.1" 200 -
+2025-08-02 15:53:18,411 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:53:18] "[32mPOST /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:53:18,414 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:53:18] "[31m[1mPOST /api/v1/employees HTTP/1.1[0m" 415 -
+2025-08-02 15:53:24,737 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:53:24] "[32mPOST /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:53:24,739 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:53:24] "[31m[1mPOST /api/v1/employees HTTP/1.1[0m" 400 -
+2025-08-02 15:54:00,528 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:00] "[32mPOST /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:54:00,530 - __main__ - ERROR - Error creating employee: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-08-02 15:54:00,531 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:00] "[35m[1mPOST /api/v1/employees HTTP/1.1[0m" 500 -
+2025-08-02 15:54:04,621 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:04] "[32mGET /api/v1//employees/999 HTTP/1.1[0m" 308 -
+2025-08-02 15:54:04,622 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:04] "[33mGET /api/v1/employees/999 HTTP/1.1[0m" 404 -
+2025-08-02 15:54:13,772 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:13] "[32mPOST /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:54:13,776 - __main__ - INFO - Processing employee creation request with prompt: Invalid data test with no proper email or name information...
+2025-08-02 15:54:14,760 - __main__ - INFO - AI Response: name: Unknown, email: unknown, department: unknown, job_title: unknown, joining_date: 2025-08-02
+2025-08-02 15:54:14,761 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:14] "[31m[1mPOST /api/v1/employees HTTP/1.1[0m" 400 -
+2025-08-02 15:54:30,217 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:30] "[32mPOST /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:54:30,222 - __main__ - INFO - Processing employee creation request with prompt: Alex Brown, HR Specialist, alex.brown@company.com...
+2025-08-02 15:54:31,138 - __main__ - INFO - AI Response: name: Alex Brown, email: alex.brown@company.com, department: unknown, job_title: HR Specialist, joining_date: 2025-08-02
+2025-08-02 15:54:31,140 - __main__ - INFO - Saved 3 employees to employees.json
+2025-08-02 15:54:31,140 - __main__ - INFO - Successfully created employee with ID: 3
+2025-08-02 15:54:31,140 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:31] "[35m[1mPOST /api/v1/employees HTTP/1.1[0m" 201 -
+2025-08-02 15:54:56,486 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:56] "[32mPOST /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:54:56,488 - __main__ - INFO - Processing employee creation request with prompt: Alex Brown HR Specialist, alex.brown@company.com...
+2025-08-02 15:54:57,381 - __main__ - INFO - AI Response: name: Alex Brown, email: alex.brown@company.com, department: HR, job_title: HR Specialist, joining_date: 2025-08-02
+2025-08-02 15:54:57,382 - __main__ - INFO - Saved 4 employees to employees.json
+2025-08-02 15:54:57,382 - __main__ - INFO - Successfully created employee with ID: 4
+2025-08-02 15:54:57,383 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:54:57] "[35m[1mPOST /api/v1/employees HTTP/1.1[0m" 201 -
+2025-08-02 15:55:22,533 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:55:22] "[32mPOST /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:55:22,535 - __main__ - INFO - Processing employee creation request with prompt: Alex Brown , HR Specialist, alex.brown@company.com...
+2025-08-02 15:55:23,669 - __main__ - INFO - AI Response: name: Alex Brown, email: alex.brown@company.com, department: unknown, job_title: HR Specialist, joining_date: 2025-08-02
+2025-08-02 15:55:23,670 - __main__ - INFO - Saved 5 employees to employees.json
+2025-08-02 15:55:23,670 - __main__ - INFO - Successfully created employee with ID: 5
+2025-08-02 15:55:23,670 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:55:23] "[35m[1mPOST /api/v1/employees HTTP/1.1[0m" 201 -
+2025-08-02 15:55:32,099 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:55:32] "[32mPOST /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:55:32,101 - __main__ - INFO - Processing employee creation request with prompt: Alex Brown HR Specialist, alex.brown@company.com...
+2025-08-02 15:55:33,091 - __main__ - INFO - AI Response: name: Alex Brown, email: alex.brown@company.com, department: HR, job_title: HR Specialist, joining_date: 2025-08-02
+2025-08-02 15:55:33,092 - __main__ - INFO - Saved 6 employees to employees.json
+2025-08-02 15:55:33,093 - __main__ - INFO - Successfully created employee with ID: 6
+2025-08-02 15:55:33,093 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:55:33] "[35m[1mPOST /api/v1/employees HTTP/1.1[0m" 201 -
+2025-08-02 15:56:20,327 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:56:20] "[32mGET /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:56:20,330 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:56:20] "GET /api/v1/employees HTTP/1.1" 200 -
+2025-08-02 15:59:44,279 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:59:44] "[32mGET /api/v1//employees HTTP/1.1[0m" 308 -
+2025-08-02 15:59:44,283 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 15:59:44] "GET /api/v1/employees HTTP/1.1" 200 -
+2025-08-02 16:07:47,626 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:07:47] "GET /api/v1/stats HTTP/1.1" 200 -
+2025-08-02 16:07:50,830 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:07:50] "GET /api/v1/stats HTTP/1.1" 200 -
+2025-08-02 16:12:30,627 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:12:30] "GET /docs/ HTTP/1.1" 200 -
+2025-08-02 16:12:30,671 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:12:30] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2025-08-02 16:12:30,672 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:12:30] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-08-02 16:12:30,673 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:12:30] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-08-02 16:12:30,677 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:12:30] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-08-02 16:12:30,866 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:12:30] "[36mGET /swagger.yaml HTTP/1.1[0m" 304 -
+2025-08-02 16:12:30,867 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:12:30] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-08-02 16:12:35,691 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:12:35] "[36mGET /swagger.yaml HTTP/1.1[0m" 304 -
+2025-08-02 16:12:43,385 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 16:12:43] "[36mGET /swagger.yaml HTTP/1.1[0m" 304 -
+2025-08-02 18:07:45,775 - __main__ - INFO - Loaded 6 employees from employees.json
+2025-08-02 18:07:45,775 - __main__ - INFO - Initialized AI extractor with model: gemini-2.0-flash
+2025-08-02 18:07:45,776 - __main__ - INFO - Starting Employee Management System...
+2025-08-02 18:07:45,776 - __main__ - INFO - Debug mode: False
+2025-08-02 18:07:45,776 - __main__ - INFO - Data file: employees.json
+2025-08-02 18:07:45,776 - __main__ - INFO - Swagger UI available at: http://localhost:5000/docs
+2025-08-02 18:07:45,798 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.248.56.252:5000
+2025-08-02 18:07:45,799 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
