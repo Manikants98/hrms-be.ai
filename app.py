@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 class Config:
     """Application configuration class"""
     GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-    MODEL_NAME = os.getenv('GEMINI_MODEL', 'gemini-2.0-flash')
+    MODEL_NAME = os.getenv('GEMINI_MODEL', 'gemini-2.5-flash')
     DEBUG = os.getenv('FLASK_DEBUG', 'False').lower() == 'true'
     DATA_FILE = os.getenv('DATA_FILE', 'employees.json')
 
