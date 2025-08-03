@@ -199,3 +199,6 @@
 2025-08-02 22:09:29,889 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:29] "GET /swagger.yaml HTTP/1.1" 200 -
 2025-08-02 22:09:29,890 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:29] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
 2025-08-02 22:09:44,839 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:09:44] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 22:56:05,298 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:56:05] "OPTIONS /api/v1/health HTTP/1.1" 200 -
+2025-08-02 22:56:05,304 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:56:05] "GET /api/v1/health HTTP/1.1" 200 -
+2025-08-02 22:56:07,593 - werkzeug - INFO - 127.0.0.1 - - [02/Aug/2025 22:56:07] "GET /api/v1/health HTTP/1.1" 200 -

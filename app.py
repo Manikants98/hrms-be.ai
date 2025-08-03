@@ -165,8 +165,9 @@ class AIEmployeeExtractor:
         3. Format the response exactly as: name: <value>, email: <value>, department: <value>, job_title: <value>, joining_date: <value>
         4. Ensure email addresses are valid format
         5. Use proper capitalization for names and titles
-        
-        Extract only factual information from the text.
+        6. Fix Grammatical errors in the department and job title like haman rsoure to Human Resource.
+        7. Extract the closest possible match even if there are typos.
+        8. Extract only factual information from the text.
         """
     
     def _parse_ai_response(self, response_text: str) -> Dict[str, str]:
