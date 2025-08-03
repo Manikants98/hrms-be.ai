@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__
+employees.json
+employee_management.log
+.env
+genai-env
